@@ -3,7 +3,9 @@
     <title>ACME Corp - Home </title>
   </head>
 
-  <body>
+
+  <body background= "background.png">
+
     <h1>Welcome to ACME Corp!</h1>
 
     <p>
@@ -15,9 +17,7 @@
 
 
     <style>
-      a{
 
-    }
     </style>
 
   </body>
