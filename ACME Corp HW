@@ -8,7 +8,11 @@
 <div>
 
 <div id="header">
-<h1>Product</h1>
+  <img src="acme-corp.png" alt="logo"/>
+  <ul>
+    <li><a href="#">Products</a><li>
+    <button>Sign Up</button>
+  </ul>
 </div>
 
 <div id="section"class="box white">
@@ -25,7 +29,12 @@ Copyright, 2015
 
 <style>
 
-  .box {
+  header {
+    background:grey;
+    height: 100px
+    width: 20px
+  }
+  box {
       width: 100px
       Height:100px
       border:1px black;
