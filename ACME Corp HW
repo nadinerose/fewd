@@ -29,14 +29,25 @@ Copyright, 2015
 
 <style>
 
+  ul {
+    padding: 10px;
+    text-align: right;
+  }
+
+  li {
+    display: inline;
+    padding: 10px;
+    font-size: 15px;
+  }
+
   header {
     background:grey;
-    height: 100px
-    width: 20px
+    height: 100px;
+    width: 20px;
   }
   box {
-      width: 100px
-      Height:100px
+      width: 100px;
+      Height:100px;
       border:1px black;
     }
 
