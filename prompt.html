@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <style media="screen">
+      input {
+          width:100px;
+      }
+    </style>
+
+      <input placeholder="first name" type="text" name="name" value="" class="firstName">
+      <input placeholder="last name" type="text" name="name" value="" class="lastName">
+      <button type="button" name="button">Say Hey</button>
+
+  </body>
+
+<script type="text/javascript">
+
+  var button = document.querySelector("button");
+  var input1 = document.querySelector(".fname");
+  var input2 = document.querySelector(".lname");
+  var p = document.querySelector ("p");
+
+  function SayHey(){
+      var fname = input1.value;
+      var lname = input2.value;
+      var greeting = "Hello," + fname + " " + lname + "!";
+      p.textContent = greeting;
+  }
+
+  button.addEventListener ("click", sayHey);
+
+</script>
+</html>
