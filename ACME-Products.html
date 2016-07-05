@@ -21,20 +21,25 @@
         <h1>Products</h1>
         <p>For a complete list of products, please visit the Original Illustrated Catalog of Acme Products.</p>
 
-        <img src="Images/blasting-powder.jpg" alt="firstphoto" class="img"/>
-        <p>Due to its highly volatile and explosive nature, do not ignite ACME Blasting Powder until you are in a safe location.</p>
-        <li><button class="detailsbutton">Details</button></li>
-        <li><button class="addtocartbutton">Add to Cart</button></li>
+        <ul>
+          <li class="product">
+            <img src="Images/blasting-powder.jpg" alt="firstphoto" />
+            <p>Due to its highly volatile and explosive nature, do not ignite ACME Blasting Powder until you are in a safe location.</p>
+            <button class="detailsbutton">Details</button>
+            <button class="addtocartbutton">Add to Cart</button>
+          </li>
 
-        <img src="Images/hair-grower.jpg" alt="secondphoto" class="img"/>
-        <p>ACME Hair Grower (patended) is guaranteed to make short hair long in a flash.</p>
-        <li><button class="detailsbutton">Details</button></li>
-        <li><button class="addtocartbutton">Add to Cart</button></li>
+            <img src="Images/hair-grower.jpg" alt="secondphoto" class="img"/>
+            <p>ACME Hair Grower (patended) is guaranteed to make short hair long in a flash.</p>
+            <li><button class="detailsbutton">Details</button></li>
+            <li><button class="addtocartbutton">Add to Cart</button></li>
 
-        <img src="Images/jetuni.jpg" alt="thirdphoto" class="img"/>
-        <p>Another item is the Acme Jet Propelled Line of products is the Acme Jet Propelled Unicycle, which even the most unbalanced individual can ride with ease.</p>
-        <li><button class="detailsbutton">Details</button></li>
-        <li><button class="addtocartbutton">Add to Cart</button></li>
+            <img src="Images/jetuni.jpg" alt="thirdphoto" class="img"/>
+            <p>Another item is the Acme Jet Propelled Line of products is the Acme Jet Propelled Unicycle, which even the most unbalanced individual can ride with ease.</p>
+            <li><button class="detailsbutton">Details</button></li>
+            <li><button class="addtocartbutton">Add to Cart</button></li>
+
+        </ul>
 
       </main>
 
@@ -44,7 +49,11 @@
 
       <style>
 
-      .img {
+      .product {
+        overflow: auto;
+      }
+
+      .product img {
         width: 300px;
         height: 275px;
         float: left;
