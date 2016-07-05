@@ -11,7 +11,7 @@
   font-size: 17px;
   color: white;
 }
-ul {
+header ul {
   display: inline;
   float: right;
   padding: 10px;
@@ -19,7 +19,7 @@ ul {
   text-align: right;
 }
 
-li {
+header li {
   display: inline;
   padding: 10px;
   text-shadow: 1px 1px grey;
