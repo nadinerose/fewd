@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen"/>
   </head>
 
-    <body style="background-image: url('Images/background.png');font-family: 'Lucida Grande';margin:0";>
+    <body style="background-image: url('Images/background.png'); font-family: 'Lucida Grande';margin:0";>
 
       <header>
         <img src="Images/acme-corp.png" alt="logo" class="logo"/>
@@ -22,20 +22,26 @@
         <p>For a complete list of products, please visit the Original Illustrated Catalog of Acme Products.</p>
 
         <ul>
-            <img src="Images/blasting-powder.jpg" class="product" alt="firstphoto"/>
-            <p>Due to its highly volatile and explosive nature, do not ignite ACME Blasting Powder until you are in a safe location.</p>
-            <button class="detailsbutton">Details</button>
-            <button class="addtocartbutton">Add to Cart</button>
+            <li class="product">
+              <img src="Images/blasting-powder.jpg" alt="firstphoto"/>
+              <p>Due to its highly volatile and explosive nature, do not ignite ACME Blasting Powder until you are in a safe location.</p>
+              <button class="detailsbutton">Details</button>
+              <button class="addtocartbutton">Add to Cart</button>
+            </li>
 
-            <img src="Images/hair-grower.jpg" class="product alt="secondphoto"/>
-            <p>ACME Hair Grower (patended) is guaranteed to make short hair long in a flash.</p>
-            <button class="detailsbutton">Details</button>
-            <button class="addtocartbutton">Add to Cart</button>
+            <li class="product">
+              <img src="Images/hair-grower.jpg" class="product" alt="secondphoto"/>
+              <p>ACME Hair Grower (patended) is guaranteed to make short hair long in a flash.</p>
+              <button class="detailsbutton">Details</button>
+              <button class="addtocartbutton">Add to Cart</button>
+            </li>
 
-            <img src="Images/jetuni.jpg" class="product" alt="thirdphoto"/>
-            <p>Another item is the Acme Jet Propelled Line of products is the Acme Jet Propelled Unicycle, which even the most unbalanced individual can ride with ease.</p>
-            <button class="detailsbutton">Details</button>
-            <button class="addtocartbutton">Add to Cart</button>
+            <li class="product">
+              <img src="Images/jetuni.jpg" class="product" alt="thirdphoto"/>
+              <p>Another item is the Acme Jet Propelled Line of products is the Acme Jet Propelled Unicycle, which even the most unbalanced individual can ride with ease.</p>
+              <button class="detailsbutton">Details</button>
+              <button class="addtocartbutton">Add to Cart</button>
+            </li>
         </ul>
 
       </main>
@@ -46,21 +52,25 @@
 
       <style>
 
+
       .product {
+       overflow: auto;
+       list-style:none;
+
+      }
+      .product img {
         width: 300px;
         height: 275px;
         float: left;
-        clear: left;
         margin-left:20px;
         margin-right: 20px;
         padding-bottom: 20px;
-        overflow: auto;
-        position:relative;
+
       }
 
       .addtocartbutton {
         color:white;
-        background-color: rgb (9,35,251);
+        background-color: rgb(9,35,251);
         border-radius: 5px;
         text-decoration: none;
         overflow: auto;
@@ -69,7 +79,7 @@
       }
 
        .detailsbutton {
-         color:rgb (9,35,251);
+         color:rgb(9,35,251);
          background-color: white;
          border:1px solid rgb(39,49,148);
          border-radius: 5px;
@@ -80,10 +90,7 @@
        }
 
        ul {
-         display: inline;
-         float: left;
-         text-align: right;
-         overflow: auto;
+         padding:0;
        }
 
        main {
