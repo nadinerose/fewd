@@ -22,26 +22,30 @@
         <h1>Sign Up</h1>
         <form action="index.html" method="post">
 
-            <div>
+            <div class=>
             <label for="firstname">First name:</label>
-            <input class="form-row" placeholder="John" id"firstname" type"text" name"first-name" value="">
+            <input class="form-field" placeholder="John" id"firstname" type"text" name"first-name" value="">
             </div>
 
             <div>
             <label for="lastname">Last name:</label>
-            <input class="form-row" placeholder="Doe" id"lastname" type"text" name"last-name" value="">
+            <input class="form-field" placeholder="Doe" id"lastname" type"text" name"last-name" value="">
             </div>
 
             <div>
             <label for="email">E-mail:</label>
-            <input  class="form-row" placeholder="john.doe@example.com" id"email" type"text" name"email" value="">
+            <input  class="form-field" placeholder="john.doe@example.com" id"email" type"text" name"email" value="">
             </div>
 
             <div>
             <label for="password">Password:</label>
-            <input class="form-row" id"password" type"text" name"password" value="">
+            <input class="form-field" id"password" type"text" name"password" value="">
             </div>
 
+            <div>
+            <button>Sign up</button>
+            </div>
+            
         </form>
 
       </main>
@@ -53,6 +57,12 @@
       <style>
 
        .form-row {
+         padding: 15px;
+
+       }
+
+
+       .form-field {
           width: 200px;
           Height: 20px;
           border: 2px solid red;
