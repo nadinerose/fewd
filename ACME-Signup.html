@@ -22,7 +22,7 @@
         <h1>Sign Up</h1>
         <form action="index.html" method="post">
 
-            <div class=>
+            <div>
             <label for="firstname">First name:</label>
             <input class="form-field" placeholder="John" id"firstname" type"text" name"first-name" value="">
             </div>
@@ -45,6 +45,10 @@
             <input type="checkbox" name="terms" value="agree">
             Agree to our terms of service<br>
 
+            How did you hear about us?<br>
+            <input type:"selector" name="source" value="Friend,Search">
+
+
             <div>
             <button class="signuppagebutton">Sign up</button>
             </div>
@@ -59,20 +63,25 @@
 
       <style>
 
-       .form-row {
-         padding: 15px;
-
-       }
-
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+        outline: 0;
+        border-color: #2A4CB2;
+}
 
        .form-field {
           width: 200px;
-          Height: 20px;
+          height: 20px;
           border: 2px solid red;
           padding: 10px 20px;
           margin: 10px 0;
           border-radius: 4px;
           box-sizing: border-box;
+          display: inline-block;
+          margin-left: 20px;
+          overflow:auto;
+
        }
 
        .signuppagebutton {
