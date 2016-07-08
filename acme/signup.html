@@ -6,47 +6,55 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen"/>
   </head>
 
-    <body style="background-image: url('Images/background.png');font-family: 'Lucida Grande';margin:0";>
+    <body>
 
       <header>
-        <img src="Images/acme-corp.png" alt="logo" class="logo"/>
+        <img src="images/acme-corp.png" alt="logo" class="logo"/>
         <ul>
-        <li class="header-text">About ACME Corp</li>
-        <li class="header-text">Products</li>
-        <li><button class="header-text">Sign Up</button></li>
-       </ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="signup.html" class="button">Sign Up</a></li>
+        </ul>
       </header>
 
       <main>
 
         <h1>Sign Up</h1>
         <form action="index.html" method="post">
-
-            <div>
+          <div class="form-row">
             <label for="firstname">First name:</label>
-            <input class="form-field" placeholder="John" id"firstname" type"text" name"first-name" value="">
-            </div>
+            <input class="form-field" placeholder="John" id="firstname" type="text" name="first-name" value="">
+          </div>
 
-            <div>
+          <div class="form-row">
             <label for="lastname">Last name:</label>
-            <input class="form-field" placeholder="Doe" id"lastname" type"text" name"last-name" value="">
-            </div>
+            <input class="form-field" placeholder="Doe" id="lastname" type="text" name="last-name" value="">
+          </div>
 
-            <div>
+          <div class="form-row">
             <label for="email">E-mail:</label>
-            <input  class="form-field" placeholder="john.doe@example.com" id"email" type"text" name"email" value="">
-            </div>
+            <input  class="form-field" placeholder="john.doe@example.com" id="email" type="text" name="email" value="">
+          </div>
 
-            <div>
+          <div class="form-row">
             <label for="password">Password:</label>
-            <input class="form-field" id"password" type"text" name"password" value="">
-            </div>
+            <input class="form-field" id="password" type="text" name="password" value="">
+          </div>
 
-            <input type="checkbox" name="terms" value="agree">
-            Agree to our terms of service<br>
+          <div class="form-row">
+            <input type="checkbox" name="terms" value="agree" id="terms">
+            <label for="terms">Agree to our terms of service</label>
+          </div>
 
-            How did you hear about us?<br>
-            <input type:"selector" name="source" value="Friend,Search">
+          <div class="form-row">
+            <label for="source">How did you hear about us?</label><br>
+            <select id="source">
+              <option></option>
+              <option>Friend</option>
+              <option>Search</option>
+              <option>Other</option>
+            </select>
+
+          </div>
 
 
             <div>
@@ -70,12 +78,15 @@
         border-color: #2A4CB2;
 }
 
+        .form-row {
+          margin: 10px 0;
+        }
+
        .form-field {
           width: 200px;
           height: 20px;
           border: 2px solid red;
           padding: 10px 20px;
-          margin: 10px 0;
           border-radius: 4px;
           box-sizing: border-box;
           display: inline-block;
@@ -107,6 +118,11 @@
          padding-bottom: 15px;
        }
 
+       label {
+         min-width: 100px;
+         display: inline-block;
+
+       }
        footer {
          margin-left: 10%;
          margin-right: 10%;
