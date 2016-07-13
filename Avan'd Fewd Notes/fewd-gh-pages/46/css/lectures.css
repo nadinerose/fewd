@@ -1,0 +1,33 @@
+@import 'homework.css';
+@import 'frames.css';
+@import 'icons.css';
+@import 'carousels.css';
+@import 'asides.css';
+@import 'utilities.css';
+@import 'images.css';
+@import 'tables.css';
+@import 'headings.css';
+@import 'you-do.css';
+@import 'vocab.css';
+
+body {
+  padding-top: 70px;
+  background-color: #fffae6;
+}
+
+main {
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.gist,
+pre {
+  clear: both;
+  margin: 2em 0;
+  max-width: 700px;
+}
+
+main p {
+  max-width: 600px;
+}

@@ -1,0 +1,19 @@
+<input type="text" id="input1" value="">
+<button type="button">Say it</button>
+
+
+<script type="text/javascript">
+  var input = document.querySelector("input");
+  var button = document.querySelector("button");
+  var body = document.querySelector("body");
+
+    button.addEventListener("click",sayIt);
+
+        function sayIt (event){
+        var div = document.createElement("div");
+        div.textContent = input.value;
+        body.appendChild(div);
+
+      };
+
+</script>
