@@ -1,0 +1,40 @@
+<p>
+  There are <span id="count">0</span> students in the class:
+</p>
+
+<ol>
+</ol>
+
+<script>
+var students = [
+  "Aziza",
+  "Christine",
+  "Elisa",
+  "Gabriel",
+  "Jake",
+  "Megan",
+  "Nadine",
+  "Nour",
+  "Paige",
+  "SoRa",
+  "Tiana"
+];
+</script>
+
+<script>
+// Your code goes here:
+// 1. Add each student to the main <ol>
+// 2. Change the 0 to reflect the number of students in the array
+  function listStudent (student) {
+    var li = document.createElement("li");
+    li.textContent=student;
+
+    var ol = document.querySelector("ol");
+    ol.appendChild(li);
+  }
+  students.forEach (listStudent);
+
+  var span = document.querySelector ("#count");
+  span.textContent = students.length;
+  
+</script>
