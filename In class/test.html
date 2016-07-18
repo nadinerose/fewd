@@ -1,0 +1,17 @@
+<style>
+.hidden { display: none !important; }
+.rounded-box { border: 1px solid black; border-radius: 5px; }
+</style>
+
+<button type="button" id="start">Button</button>
+
+<div id="welcome" class="hidden rounded-box">
+  Welcome!
+</div>
+
+<script>
+var button = document.querySelector("start");
+function start() {
+document.querySelector("welcome").removeAttribute("class");
+button.addEventListener("click", start); }
+</script>
