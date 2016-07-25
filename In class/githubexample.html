@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Github Callback</title>
+  </head>
+  <body>
+
+
+<form>
+  <input type="search" id="query" placeholder="GitHub username">
+  <input type="submit" value="Lookup">
+</form>
+
+<table>
+  <tr>
+    <th>Name:</th>
+    <td id="user-name"></td>
+  </tr>
+  <tr>
+    <th>Bio:</th>
+    <td id="user-bio"></td>
+  </tr>
+  <tr>
+    <th>Picture:</th>
+    <td id="user-picture"></td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+<script>
+//Why did I create form?
+var form = document.querySelector("form");
+// 
+var input = document.querySelector("#query");
+
+form.addEventListener ("submit", submitForm);
+
+function submitForm (event) {
+  event.preventDefault();
+  var url = "https://api.github.com/users/" + input.value;
+  get(url, showInfo);
+
+}
+
+function showInfo (data) {
+  var accountInfo = JSON.parse(data);
+  document.querySelector("#user-name").textContent = accountInfo.name;
+  document.querySelector("#user-bio").textContent = accountInfo.bio;
+
+  var img = document.createElement("img");
+  img.setAttribute("src", accountInfo.avatar_url);
+  document.querySelector("#user-picture").appendChild(img);
+
+}
+
+function get(url, callback) {
+  var request = new XMLHttpRequest();
+
+  request.open("GET", url, true);
+
+  request.addEventListener("readystatechange", handleReadyStateChange)
+
+  function handleReadyStateChange() {
+    if (request.readyState == 4 && request.status == 200) {
+      callback(request.responseText);
+    }
+  };
+
+  request.send();
+}
+
+</script>
