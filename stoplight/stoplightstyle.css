@@ -1,4 +1,4 @@
-<style>
+
 
 .button {
   background-color: white;
@@ -7,8 +7,9 @@
   font-size: 10px;
   text-decoration: none;
   font-family: Lucida Grande;
+}
 
-  .traffic-light {
+  #traffic-light {
     height: 550px;
     width: 200px;
     float: left;
@@ -21,9 +22,20 @@
   .light {
     height: 150px;
     width: 150px;
-    background-color: dark grey;
+    background-color:grey;
     border-radius: 50%;
     margin: 25px auto;
 
   }
-</style>
+
+.stop {
+  background-color:red;
+}
+
+.slow {
+  background-color:orange;
+}
+
+.go {
+  background-color:green;
+}

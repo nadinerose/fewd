@@ -3,17 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Stoplight</title>
+    <link rel="stylesheet" type="text/css" href="stoplightstyle.css" media="screen"/>
   </head>
 
   <body>
-    <button type="button" name="button" class=button>Stop</button>
-    <button type="button" name="button" class=button>Slow</button>
-    <button type="button" name="button" class=button>Go</button>
-    <button type="button" name="button" class=button>Caution</button>
+    <button type="button" id="stopbutton" class="button">Stop</button>
+    <button type="button" id="slowbutton" class="button">Slow</button>
+    <button type="button" id="gobutton" class="button">Go</button>
+    <button type="button" id="cautionbutton" class="button">Caution</button>
 
-    <div>
-      
+    <div id="traffic-light">
+      <div id="stoplight" class="light stop"></div>
+      <div id="slowlight" class="light slow"></div>
+      <div id="golight" class="light go"></div>
     </div>
 
+
+    <script src="stoplight.js"></script>
   </body>
+
 </html>
