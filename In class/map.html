@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Map</title>
+  </head>
+  <body>
+    <img width="600" src="http://static-maps.yandex.ru/1.x/?lang=en-US&ll=-73.7638,42.6564&z=13&l=map&size=600,300" alt="Yandex Map of -73.7638,42.6564">
+  </body>
+</html>
+
+<script>
+navigator.geolocation.getCurrentPosition(displayCurrentPosition);
+
+function displayCurrentPosition(position) {
+  var coords = position.coords;
+  console.log(coords.latitude, coords.longitude);
+}
+</script>
