@@ -6,26 +6,32 @@ var newResult = document.querySelector("#movie-list");
 function submitSearch(event) {
   event.preventDefault();
   var url = "http://omdbapi.com/?s=" + input.value;
-  get(url,listMovie);
+  get(url, showResults);
 
 }
 
 function showResults(data) {
   var movieInfo = JSON.parse(data);
-  //document.querySelector("#movie-list").textContent = movieInfo.Search;
-  //document.querySelector("#movie-list").appendChild(movieInfo);
+  document.querySelector("#movie-list").textContent="";
   movieInfo.Search.forEach (listMovie);
+
 
 }
 function listMovie (movie) {
     var listItem = document.createElement("li");
-    listItem.textContent = movie.Title;
-    //listItem.textContent = movie.Year;
-    var link = document.CreateElement("a");
-    link.setAttribute("href","http://imbd.com/?=");
-    var title = document.createElement("")
 
+    var link = document.createElement("a");
+    link.setAttribute("href","http://imdb.com/title/"+ movie.imdbID);
+    link.classList.add("movie-title");
+    link.textContent = movie.Title;
 
+    var year = document.createElement("div");
+    year.textContent = movie.Year;
+
+    listItem.appendChild(link);
+    listItem.appendChild(year);
+
+    document.querySelector("#movie-list").appendChild(listItem);
 
 }
 

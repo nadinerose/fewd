@@ -39,14 +39,24 @@ button {
   background-color:rgb(72, 196, 170);
 }
 
-#todo-list {
+#movie-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-#todo-list li {
+#movie-list li {
   margin-top: 0.75em;
   padding-top: 0.75em;
+  color:grey;
+}
+.movie-title {
+  font-size:20px;
+  color:rgb(72, 196, 170);
+  text-decoration: none;
+}
+
+.movie-title:hover {
+  text-decoration: underline;
 }
 
 input[type="checkbox"] {
