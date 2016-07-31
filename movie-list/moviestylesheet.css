@@ -48,6 +48,12 @@ button {
   margin-top: 0.75em;
   padding-top: 0.75em;
   color:grey;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 25px;
+}
+#movie-list li:last-child {
+  border-bottom: none;
+  padding-bottom:0px;
 }
 .movie-title {
   font-size:20px;
