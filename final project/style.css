@@ -1,0 +1,120 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f1f0f5;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.4em;
+}
+main {
+  margin: 2em auto;
+  background: transparent;
+  padding: 10px 20px;
+  min-width: 800px;
+  border-radius: 5px;
+}
+
+label {
+  cursor: pointer;
+}
+
+footer {
+  text-align:center;
+  color: black;
+}
+
+.news-tile {
+  margin: 50px 25px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  background: white;
+  padding: 20px 20px;
+  max-width: 300px;
+  min-width:250px;
+  height:300px;
+  border-radius: 5px;
+  display:inline-block;
+  overflow:hidden;
+  text-decoration:none;
+  font-family: Arial;
+  font-size: 15px;
+
+}
+
+.description {
+  max-height:75px;
+  overflow: hidden;s
+
+}
+
+.buttonish {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom-width: 2px;
+  border-radius: 5px; font-size: inherit;
+  padding: .5em 1em;
+  cursor: pointer;
+}
+
+.news-icon {
+  height: 10px;
+  width: 10px;
+  float: right;
+
+}
+#new-item-input {
+  width: 70%;
+}
+
+button {
+  color: white;
+  width: 28%;
+  background-color:rgb(72, 196, 170);
+}
+
+#news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#news-list li {
+  margin-top: 0.75em;
+  padding-top: 0.75em;
+  color:grey;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 25px;
+}
+#news-list li:last-child {
+  border-bottom: none;
+  padding-bottom:0px;
+}
+
+#news-list ul li:after {
+  content: url('...blueheart.png');
+}
+
+.news-title {
+  display: block;
+  font-size:15px;
+  color:rgb(72, 196, 170);
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight:bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 260px;
+
+}
+
+.news-title:hover {
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  margin-right: 1em;
+}
+input:checked + span {
+  opacity: 0.2;
+  text-decoration: line-through;
+}
