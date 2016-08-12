@@ -21,6 +21,7 @@ function createTask(todo) {
  label.appendChild(span);
  listItem.appendChild(label);
  toDoList.appendChild(listItem);
+
 }
 
 function formSubmitted(event) {
@@ -29,6 +30,22 @@ function formSubmitted(event) {
   newTask.value.split(",").forEach(createTask);
 
   form.reset();
+
+  localStorage.setItem("listHTML", toDoList.innerHTML);
 }
 
 form.addEventListener("submit", formSubmitted);
+
+toDoList.innerHTML = localStorage.getItem("listHTML");
+
+// WHEN the page laods
+// - Look in localStorage to see if the HTML for the list is there
+// - IF the HTML is there
+// - Set the HTML of the list of the HTML in localStorage
+// list.innerHTML = localStorage.getItem("listHTML")
+
+//When the user adds an item
+// - Do all the normal stuff
+// - ONce the item is aded to the list
+// - Save the HTML of the list to localStorage
+// localStorage.setItem("listHTML", list.innerHTML)
