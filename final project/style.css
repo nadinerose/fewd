@@ -1,12 +1,13 @@
 * { box-sizing: border-box; }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   background: #f1f0f5;
-  font-family: sans-serif;
-  font-size: 18px;
-  line-height: 1.4em;
+  font-family: Arial !important;
+  font-size: 20px;
+  line-height: 1em;
 }
+
 main {
   margin: 2em auto;
   background: transparent;
@@ -24,11 +25,28 @@ footer {
   color: black;
 }
 
+button {
+  color: white;
+  width: 28%;
+  background-color:rgb(72, 196, 170);
+}
+
+input,
+button {
+  font-family:inherent;
+}
+
+.first-page {
+  background:
+  url("hungarian_migrants.jpg") fixed center no-repeat;
+  background-size:cover;
+}
+
 .news-tile {
   margin: 50px 25px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   background: white;
-  padding: 20px 20px;
+  padding: 10px 10px 10px 10px;
   max-width: 300px;
   min-width:250px;
   height:300px;
@@ -36,15 +54,12 @@ footer {
   display:inline-block;
   overflow:hidden;
   text-decoration:none;
-  font-family: Arial;
   font-size: 15px;
-
 }
 
 .description {
   max-height:75px;
-  overflow: hidden;s
-
+  overflow: hidden;
 }
 
 .buttonish {
@@ -59,16 +74,25 @@ footer {
   height: 10px;
   width: 10px;
   float: right;
-
 }
+
+.news-title {
+  display: block;
+  font-size:15px;
+  color:rgb(72, 196, 170);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight:bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 260px;
+}
+
 #new-item-input {
-  width: 70%;
-}
-
-button {
-  color: white;
-  width: 28%;
-  background-color:rgb(72, 196, 170);
+  width: 40%;
+  margin:0 auto;
+  margin-top: 225px;
 }
 
 #news-list {
@@ -76,6 +100,7 @@ button {
   padding: 0;
   list-style: none;
 }
+
 #news-list li {
   margin-top: 0.75em;
   padding-top: 0.75em;
@@ -83,6 +108,7 @@ button {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 25px;
 }
+
 #news-list li:last-child {
   border-bottom: none;
   padding-bottom:0px;
@@ -92,28 +118,10 @@ button {
   content: url('...blueheart.png');
 }
 
-.news-title {
-  display: block;
-  font-size:15px;
-  color:rgb(72, 196, 170);
-  text-decoration: none;
-  font-family: Arial;
-  font-size: 15px;
-  font-weight:bold;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 260px;
-
-}
-
-.news-title:hover {
-  text-decoration: underline;
-}
-
 input[type="checkbox"] {
   margin-right: 1em;
 }
+
 input:checked + span {
   opacity: 0.2;
   text-decoration: line-through;

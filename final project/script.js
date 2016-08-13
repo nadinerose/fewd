@@ -51,22 +51,22 @@ function listNews (post) {
     link.classList.add("news-title");
     link.textContent = post.name;
 
-    var description = document.createElement("div");
-    description.textContent = post.description;
-    description.classList.add("description");
-
     var image = document.createElement("img");
     image.setAttribute("src",post.image.thumbnail.contentUrl);
     image.classList.add("news-image");
+
+    var description = document.createElement("div");
+    description.textContent = post.description;
+    description.classList.add("description");
 
     //Create variable for icon that indicates if article is a favorite
     var icon = document.createElement("img");
     icon.setAttribute("src","blueheart.png");
     icon.classList.add("news-icon");
 
+    listItem.appendChild(image);
     listItem.appendChild(link);
     listItem.appendChild(description);
-    listItem.appendChild(image);
     listItem.appendChild(icon);
 
     document.querySelector("#news-list").appendChild(listItem);
