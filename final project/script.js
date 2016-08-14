@@ -128,7 +128,12 @@ function listFavorite (fav) {
 function shareFavorites() {
   FB.login(function(){
     // Note: The call will only work if you accept the permission request
-    FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+    var listOfLinks = "";
+    newsFavorites.forEach (function(fav) {
+      listOfLinks = listOfLinks + fav.name + " - " + fav.url + "\n";
+    });
+
+    FB.api('/me/feed', 'post', { message: listOfLinks });
   }, {scope: 'publish_actions'});
 
 }
