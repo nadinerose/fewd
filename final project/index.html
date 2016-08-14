@@ -9,27 +9,44 @@
   </head>
 
   <body class="first-page">
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '498957786970578',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
     <main>
       <!---WHEN page loads input is on the page
            WHEN page loads button is on the page
            WHEN page loads there is a background image-->
 
       <form id="news-search-form">
-        <input type="text" id="new-item-input" class="buttonish" placeholder="Keyword" autofocus required>
-        <button class="buttonish" type="submit">Search</button>
+        <input type="text" id="new-item-input" placeholder="Keyword" autofocus required>
+        <button class="search-button" type="submit">Search</button>
+        <button class="favorites_popup_open" type="submit">Favorite Articles</button>
       </form>
 
       <ul id="news-list"></ul>
     </main>
 
-    <footer>
-      <button class="buttonish favorites_popup_open" type="submit">Favorite Articles</button>
-    </footer>
-
     <div id="favorites_popup">
       <!---Adding in content from the array-->
       <ul id="favorites-list"></ul>
-      <button class="buttonish favorites_popup_close">Close</button>
+      <button class="favorites_popup_close">Close</button>
+      <button id="share_to_facebook">Share to Facebook</button>
     </div>
 
     <script type="text/javascript" src="script.js"></script>

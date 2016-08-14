@@ -35,6 +35,7 @@ function submitSearch(event) {
 function showResults(newsInfo) {
   document.querySelector("#news-list").textContent="";
   newsInfo.value.forEach (listNews);
+  $('.favorites_popup_open').show();
 }
 
 // WHEN the response comes back create a list of responses
@@ -98,30 +99,38 @@ $(document).ready(function() {
     beforeopen: populateFavoritesList
   });
 
+  var facebookButton = document.querySelector("#share_to_facebook");
+  facebookButton.addEventListener("click", shareFavorites)
+
 });
 
 //WHEN pop up opens there is a list of favorite articles
 function populateFavoritesList () {
   document.querySelector("#favorites-list").textContent="";
-  //Need to create class for favorites list
   newsFavorites.forEach (listFavorite);
 }
 
 function listFavorite (fav) {
   var favItem = document.createElement("li");
-  favItem.classList.add("fav-box");
-  //Need to create class for fav-tile
+  favItem.classList.add("#favorites_popup");
 
   var link = document.createElement("a");
   link.setAttribute("href", fav.url);
 
   link.classList.add("fav-title");
-  //Need to create class for fav-title
   link.textContent = fav.name;
 
   favItem.appendChild(link);
 
   document.querySelector("#favorites-list").appendChild(favItem);
+}
+
+function shareFavorites() {
+  FB.login(function(){
+    // Note: The call will only work if you accept the permission request
+    FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+  }, {scope: 'publish_actions'});
+
 }
 
 // Get request
@@ -140,5 +149,6 @@ function get(url, callback) {
 
   request.send();
 }
+
 
 form.addEventListener ("submit", submitSearch);

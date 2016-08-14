@@ -3,37 +3,25 @@
 body {
   margin: 0 auto;
   background: #f1f0f5;
-  font-family: Arial !important;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 1em;
-}
-
-main {
-  margin: 2em auto;
-  background: transparent;
-  padding: 10px 20px;
-  min-width: 800px;
-  border-radius: 5px;
 }
 
 label {
   cursor: pointer;
 }
 
-footer {
-  text-align:center;
-  color: black;
-}
-
 button {
   color: white;
-  width: 28%;
-  background-color:rgb(72, 196, 170);
-}
-
-input,
-button {
-  font-family:inherent;
+  width: 10%;
+  background-color:blue;
+  font-family:inherit;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  height: 47px;
 }
 
 .first-page {
@@ -62,12 +50,20 @@ button {
   overflow: hidden;
 }
 
-.buttonish {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom-width: 2px;
-  border-radius: 5px; font-size: inherit;
-  padding: .5em 1em;
-  cursor: pointer;
+.search-button {
+  width: 125px;
+  vertical-align: top;
+}
+
+.favorites_popup_open {
+  display:none;
+  width: 200px;
+  vertical-align: top;
+}
+
+.favorites_popup_close {
+  width: 85px;
+  float:right;
 }
 
 .news-icon {
@@ -89,10 +85,31 @@ button {
   max-width: 260px;
 }
 
-#new-item-input {
-  width: 40%;
-  margin:0 auto;
+.fav-title {
+  display: block;
+  color:black;
+  text-decoration: none;
+  font-size: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 200px;
+}
+
+#news-search-form {
+  margin:auto 20%;
   margin-top: 225px;
+}
+
+#new-item-input {
+  width: 50%;
+  font-size:20px;
+  font-family:inherit;
+  display:inline-block;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  font-size: inherit;
+  padding: .5em 1em;
 }
 
 #news-list {
@@ -101,28 +118,37 @@ button {
   list-style: none;
 }
 
-#news-list li {
-  margin-top: 0.75em;
-  padding-top: 0.75em;
+#favorites_popup {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding:15px;
+  box-shadow:0px 0px 10px lightgrey;
+  font-size: 17px;
+  font-family:inherited;
+}
+
+#favorites-list {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+#favorites-list li {
+  padding-top: 10px;
   color:grey;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 25px;
+  padding-bottom: 10px;
 }
 
-#news-list li:last-child {
+#favorites-list li:last-child {
   border-bottom: none;
-  padding-bottom:0px;
+  padding-bottom:10px;
 }
 
-#news-list ul li:after {
-  content: url('...blueheart.png');
-}
-
-input[type="checkbox"] {
-  margin-right: 1em;
-}
-
-input:checked + span {
-  opacity: 0.2;
-  text-decoration: line-through;
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+    border-color: black;
+    box-shadow: 0 1px 1px lightgrey inset, 0 0 8px lightgrey;
+    outline: 0 none;
 }

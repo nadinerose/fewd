@@ -39,29 +39,29 @@ button {
   background-color:rgb(72, 196, 170);
 }
 
-#news-list {
+#movie-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-#news-list li {
+#movie-list li {
   margin-top: 0.75em;
   padding-top: 0.75em;
   color:grey;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 25px;
 }
-#news-list li:last-child {
+#movie-list li:last-child {
   border-bottom: none;
   padding-bottom:0px;
 }
-.news-title {
+.movie-title {
   font-size:20px;
   color:rgb(72, 196, 170);
   text-decoration: none;
 }
 
-.news-title:hover {
+.movie-title:hover {
   text-decoration: underline;
 }
 
