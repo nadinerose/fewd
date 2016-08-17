@@ -23,7 +23,7 @@
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
+     js.src = "http://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
@@ -36,7 +36,7 @@
       <form id="news-search-form">
         <input type="text" id="new-item-input" placeholder="Keyword" autofocus required>
         <button class="search-button" type="submit">Search</button>
-        <button class="favorites_popup_open" type="submit">Favorite Articles</button>
+        <button class="favorites_popup_open" type="submit">Favorites</button>
       </form>
 
       <ul id="news-list"></ul>

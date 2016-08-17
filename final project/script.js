@@ -12,6 +12,9 @@ function submitSearch(event) {
   event.preventDefault();
   var token = "69ea4e2e072746769631019c02d5f877";
 
+  var background = document.querySelector("body");
+  background.classList.add("second-page");
+
 //Added API from Bing for Search/News (copy/paste)
   var params = {
           // Request parameters
@@ -53,8 +56,13 @@ function listNews (post) {
     link.textContent = post.name;
 
     var image = document.createElement("img");
-    image.setAttribute("src",post.image.thumbnail.contentUrl);
     image.classList.add("news-image");
+
+    if (post.image) {
+        image.setAttribute("src",post.image.thumbnail.contentUrl);
+    } else {
+      image.setAttribute("src", "no_image_thumb.gif");
+    }
 
     var description = document.createElement("div");
     description.textContent = post.description;
