@@ -28,31 +28,32 @@ button {
   border: 1px solid #3b5998;
   display:inline-block;
 }
+.outer { width: 600px; }
+.inner { width: 250px; margin: 0 auto; }
 
 .main-title {
-  /*margin-top: 1%;*/
-  /*margin-bottom: 5%;*/
-  /*margin-right: 0.25%;*/
-  /*margin-left: 0.25%;*/
-  width: 90%;
-  font-size:100px;
+  margin:1%;
+  width: 100%;
+  font-size:64px;
   font-family:inherit;
-  display:inline-block;*/
-  /*padding: .5em 1em;*/
-  color:white;
-
+  display:inline-block;
+  visibility: hidden;
+  color: #595959 !important;
 }
 
 .sub-title {
-  /*margin: 0 auto;*/
+  margin:1%;
   width: 90%;
   font-type: inherit;
   font-style: oblique;
-  font-size:20px;
+  font-size:18px;
   display:inline-block;
-  /*padding: .5em 1em;*/
-  color:white;
+  visibility: hidden;
+  color:grey;
+}
 
+.sub-title.visible, .main-title.visible, .news-tile.visible {
+  visibility: visible !important;
 }
 
 .first-page {
@@ -78,23 +79,43 @@ button {
   border-color: #3b5998;
   display:inline-block;
   overflow:hidden;
+  visibility: hidden;
   text-decoration:none;
   font-size: 12px;
 
+}
+.news-title {
+  display: block;
+  font-size:15px;
+  color: #595959;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight:bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 260px;
 }
 
 .description {
   max-height:100px;
   overflow: hidden;
+  color:grey;
 }
-
 .news-image {
   width: 100px;
   height: 100px;
   display:inline-block;
   justify-content: center;
 }
-
+.news-icon {
+  height: 15px;
+  width: 15px;
+  text-align:center;
+  margin-left:10px;
+  padding-bottom: 2px;
+  float:right;
+}
 .search-button {
   vertical-align:top;
 }
@@ -109,28 +130,6 @@ button {
   float:right;
 }
 
-.news-icon {
-  height: 15px;
-  width: 15px;
-  text-align:center;
-  margin-left:10px;
-  padding-bottom: 2px;
-  float:right;
-}
-
-.news-title {
-  display: block;
-  font-size:15px;
-  color:black;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight:bold;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 260px;
-}
-
 .fav-title {
   display: block;
   color:black;
@@ -141,11 +140,10 @@ button {
   overflow: hidden;
   min-width: 200px;
 }
-.outer { width: 600px; }
-.inner { width: 250px; margin: 0 auto; }
 
 #news-search-form {
   margin:auto 20%;
+  width: 70%;
   margin-top: 225px;
 }
 
@@ -198,6 +196,10 @@ button {
   padding-bottom:10px;
 }
 
+#share_to_facebook {
+  width: 85px;
+  float:right;
+}
 textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
     border-color: black;
     box-shadow: 0 1px 1px lightgrey inset, 0 0 8px lightgrey;

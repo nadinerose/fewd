@@ -38,11 +38,10 @@ function submitSearch(event) {
 function showResults(newsInfo) {
   document.querySelector("#news-list").textContent="";
   newsInfo.value.forEach (listNews);
-  $('.news-tile').show();
-
-  document.querySelector("#news-list").textContent="";
-  newsInfo.value.forEach (listNews);
   $('.favorites_popup_open').show();
+  $('.news-tile').addClass('visible');
+  $(".sub-title").addClass('visible');
+  $(".main-title").addClass('visible');
 }
 
 // WHEN the response comes back create a list of responses
