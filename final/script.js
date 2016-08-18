@@ -38,6 +38,10 @@ function submitSearch(event) {
 function showResults(newsInfo) {
   document.querySelector("#news-list").textContent="";
   newsInfo.value.forEach (listNews);
+  $('.news-tile').show();
+
+  document.querySelector("#news-list").textContent="";
+  newsInfo.value.forEach (listNews);
   $('.favorites_popup_open').show();
 }
 

@@ -33,13 +33,23 @@
            WHEN page loads button is on the page
            WHEN page loads there is a background image-->
 
+    <!-- <div class="main-title"> -->
+      <!-- <p>News Share</p> -->
+    <!-- </div> -->
+
       <form id="news-search-form">
-        <input type="text" id="new-item-input" placeholder="Keyword" autofocus required>
+        <p class="main-title">NEWS SHARE</p>
+        <p class="sub-title">What's important to you? Add to your favorites & tell your friends</p>
+        <input type="text" id="new-item-input" placeholder="News Share. Input a keyword..." autofocus required>
         <button class="search-button" type="submit">Search</button>
         <button class="favorites_popup_open" type="submit">Favorites</button>
       </form>
 
-      <ul id="news-list"></ul>
+      <ul id="news-list" class="outer">
+        <li class="news-tile" "inner"></li>
+      </ul>
+
+
     </main>
 
     <div id="favorites_popup">
