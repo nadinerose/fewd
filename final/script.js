@@ -166,5 +166,4 @@ function get(url, callback) {
   request.send();
 }
 
-
 form.addEventListener ("submit", submitSearch);
