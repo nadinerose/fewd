@@ -1,0 +1,53 @@
+
+body {
+  margin:0 auto;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color:#d9d9d9;
+}
+
+.initial-page {
+  background: url("lotus.jpg") fixed center no-repeat;
+  background-size:cover;
+}
+
+.title {
+  font-size:64px;
+  margin-top:225px;
+}
+
+.dream {
+  margin:0;
+  padding:0;
+}
+.assignment-title {
+  display:inline;
+  font-size:20px;
+  font-style:oblique;
+  margin:0 auto;
+}
+
+.icon {
+  height:30px;
+  width:30px;
+  display:inline;
+  text-decoration:none;
+}
+
+#project-list ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+  text-size:15px;
+}
+#project-list ul li {display:inline;}
+
+#project-list ul li a {text-decoration:none;}
+
+.box {
+    margin-left:50px;
+    width: 50%;
+    border: none;
+    padding: 10px;
+    float:left;
+}
